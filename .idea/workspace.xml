@@ -40,7 +40,7 @@
       <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="10" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.5910653">
+            <state line="59" column="2" selection-start="1791" selection-end="1791" vertical-scroll-proportion="0.7857961">
               <folding />
             </state>
           </provider>
@@ -575,11 +575,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="14" selection-start="789" selection-end="789" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../homework3/recipe.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="22" selection-start="55" selection-end="264" vertical-scroll-proportion="0.3701016" />
@@ -662,9 +657,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="10" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.5910653">
+        <state line="59" column="2" selection-start="1791" selection-end="1791" vertical-scroll-proportion="0.7857961">
           <folding />
         </state>
       </provider>
