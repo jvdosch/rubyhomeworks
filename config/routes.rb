@@ -57,7 +57,7 @@ Facecook::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 
-  root :to => 'recipes#index'
+  map.root :to => 'recipes#index'
   get "/recipes/index" => "recipes#index"
   get "/recipes" => "recipes#index"
 
