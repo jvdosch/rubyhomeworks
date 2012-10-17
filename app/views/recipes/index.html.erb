@@ -1,0 +1,31 @@
+
+<div id="wrapper">
+  <div id="content">
+    <h1>Recipes for <span><%= @keyword %></span></h1>
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th><div class="top-left-round">&nbsp;</div></th>
+          <th><div>Title</div></th>
+          <th><div class="top-right-round">Ingredients</div></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @recipes.each { |recipe| %>
+        <tr class="<%= cycle('even', 'odd') %>">
+          <td class="img-col"><%= link_to(image_tag(recipe['thumbnail']), recipe['href']) %></td>
+          <td class="title-col"><%= link_to(raw(recipe['title']), recipe['href']) %></td>
+          <td class="ingredient-col"><%= raw recipe['ingredients'] %></td>
+        </tr>
+        <% } %>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td><div class="bot-left-round">&nbsp;</div></td>
+          <td><div>&nbsp;</div></td>
+          <td><div class="bot-right-round">&nbsp;</div></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
