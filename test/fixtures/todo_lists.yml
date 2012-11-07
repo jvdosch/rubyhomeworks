@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  list_name: MyString
+  list_due_date: 2012-10-28 13:04:11
+  user: 
+
+two:
+  list_name: MyString
+  list_due_date: 2012-10-28 13:04:11
+  user: 
