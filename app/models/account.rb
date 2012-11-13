@@ -17,4 +17,5 @@ class Account < ActiveRecord::Base
   def to_s
     "First Name: " + first_name + "  Last Name: " + last_name + "  Age: " + age.to_s + "  Gender: " + gender
   end
+
 end

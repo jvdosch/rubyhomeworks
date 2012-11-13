@@ -1,0 +1,32 @@
+<h1>Listing accounts</h1>
+
+<table>
+  <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+  </thead>
+  <tbody>
+    <% @accounts.each do |account| %>
+      <tr>
+        <th><%=account.first_name%></th>
+        <th><%=account.last_name%></th>
+        <th><%=account.age%></th>
+        <th><%=account.gender%></th>
+        <td><%= link_to 'Show', account %></td>
+        <td><%= link_to 'Edit', edit_account_path(account) %></td>
+        <td><%= link_to 'Destroy', account, confirm: 'Are you sure?', method: :delete %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Account', new_account_path %>
