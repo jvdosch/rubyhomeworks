@@ -63,10 +63,11 @@ Todo::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 
   resources :accounts
+  resources :todo_lists
 
   resources :sessions, only: [:create, :destroy, :new]
 
-  root :to => 'accounts#index'
+  root :to => 'todo_lists#index'
 
   match '/login' => 'sessions#new', as: 'login'
   match '/logout' => 'sessions#destroy', as: 'logout', via: :delete
