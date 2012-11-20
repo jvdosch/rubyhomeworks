@@ -15,15 +15,15 @@ User.delete_all
 
 # create all the users
 User.create [
-  {login: 'jdoe', password: 'Password'},
-  {login: 'cismail', password: 'Password123'},
+  {login: 'Matt', password: 'abc123'},
+  {login: 'Tim', password: 'abc123'},
   {login: 'mbrown', password: '123456'}
 ]
 
 # create accounts for all the users
 users = User.all
-users[0].account = Account.create(:gender => 'male', :age => 34, :first_name => 'John', :last_name => 'Doe' )
-users[1].account = Account.create(:gender => 'N/A', :age => 23, :first_name => 'Chris', :last_name => 'Ismail' )
+users[0].account = Account.create(:gender => 'male', :age => 34, :first_name => 'Matt', :last_name => 'Smith' )
+users[1].account = Account.create(:gender => 'male', :age => 23, :first_name => 'Tim', :last_name => 'Thomason' )
 users[2].account = Account.create(:gender => 'female', :age => 50, :first_name => 'Megan', :last_name => 'Brown' )
 
 # create some todo lists

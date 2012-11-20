@@ -1,4 +1,10 @@
 Todo::Application.routes.draw do
+  get "sessions/new"
+
+  get "sessions/create"
+
+  get "sessions/destroy"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -57,5 +63,12 @@ Todo::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 
   resources :accounts
+
+  resources :sessions, only: [:create, :destroy, :new]
+
+  root :to => 'accounts#index'
+
+  match '/login' => 'sessions#new', as: 'login'
+  match '/logout' => 'sessions#destroy', as: 'logout', via: :delete
 
 end

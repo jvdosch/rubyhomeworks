@@ -8,6 +8,17 @@
 </head>
 <body>
 
+<% if logged_in? %>
+    <div style="float: right;">
+      You are logged in as <%= current_user.login %>
+      <%=  link_to "Logout", logout_path, method: :delete %>
+    </div>
+<% end %>
+
+<% flash.each do |key, value| %>
+  <%= content_tag :p, value, class: key %>
+<% end %>
+
 <%= yield %>
 
 </body>
