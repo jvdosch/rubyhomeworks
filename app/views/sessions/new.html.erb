@@ -1,4 +1,4 @@
-<h1>Login</h1>
+<h1>Enter Login and Password</h1>
 
 <%= form_for(:user, url: sessions_path) { |f| %>
   <div class="field">
@@ -10,6 +10,6 @@
     <%= f.password_field :password %>
   </div>
   <div class="actions">
-    <%= f.submit 'Login' %>
+    <%= f.submit 'Login', {class: "button"} %>
   </div>
 <% } %>

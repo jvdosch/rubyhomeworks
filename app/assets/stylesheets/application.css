@@ -11,3 +11,186 @@
  *= require_self
  *= require_tree .
 */
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background: #524b44; /* Old browsers */
+    background: -moz-linear-gradient(top,  #524b44 0%, #46403a 44%, #35302b 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#524b44), color-stop(44%,#46403a), color-stop(100%,#35302b)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #524b44 0%,#46403a 44%,#35302b 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #524b44 0%,#46403a 44%,#35302b 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #524b44 0%,#46403a 44%,#35302b 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #524b44 0%,#46403a 44%,#35302b 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#524b44', endColorstr='#35302b',GradientType=0 ); /* IE6-9 */
+}
+
+#wrapper {
+    margin: 0 auto;
+    position: relative;
+    width: 1006px;
+}
+
+#content {
+    box-shadow: 0 0 8px #DDDDDD;
+    margin: 20px 0 20px 0;
+    padding: 5px;
+    min-height: 980px;
+
+    background: #ffffff; /* Old browsers */
+}
+
+a {
+    text-decoration: underline;
+    color: inherit;
+}
+
+h1 {
+    color: #F0F8FF;
+    margin: 8px 0;
+    padding: 12px 12px 20px;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+
+    background: #524b44; /* Old browsers */
+    background: -moz-linear-gradient(top,  #524b44 0%, #46403a 44%, #35302b 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#524b44), color-stop(44%,#46403a), color-stop(100%,#35302b)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #524b44 0%,#46403a 44%,#35302b 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #524b44 0%,#46403a 44%,#35302b 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #524b44 0%,#46403a 44%,#35302b 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #524b44 0%,#46403a 44%,#35302b 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#524b44', endColorstr='#35302b',GradientType=0 ); /* IE6-9 */
+}
+
+h1 .header-title {
+    /*color: #e1ffff;*/
+    margin-left: 8px;
+}
+
+h1 .header-status {
+    margin-left: 8px;
+    float: left;
+    clear: left;
+}
+
+h1 .header-edit-link a, h1 .header-delete-link a {
+    text-decoration: underline;
+    color: #eee8aa;
+}
+
+h1 .header-date {
+    float: right;
+    vertical-align: text-top;
+    font-size: 20px;
+    clear: both;
+}
+
+h1 .header-edit-link {
+    float: right;
+    font-size: 18px;
+    color: #f0f8ff;
+    margin-left: 12px;
+}
+
+h1 .header-back-link {
+    float: right;
+    font-size: 18px;
+    color: #f0f8ff;
+    clear: right;
+    margin-left: 12px;
+}
+
+h1 .header-delete-link {
+    float: right;
+    font-size: 18px;
+    color: #f0f8ff;
+    margin-left: 12px;
+}
+
+h1 .header-back-link a{
+    color: #f0f8ff;
+}
+
+/* GitHub style */
+div.nav-wrapper {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #405A6A;
+    background-image: linear-gradient(#829AA8, #405A6A);
+    background-repeat: repeat-x;
+    border-color: #677C89 #677C89 #6B808D;
+    border-image: none;
+    border-radius: 5px 5px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    padding: 8px 10px;
+    position: relative;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.7);
+}
+
+div.nav {
+    margin: 0 auto;
+    position: relative;
+    width: 1006px;
+}
+
+.todo_lists_link {
+    text-align: center;
+    display: inline;
+}
+
+.account_links {
+    text-align: center;
+    float: right;
+    margin-right: 12px;
+}
+
+.complete {
+    color: #00EE63;
+}
+
+.incomplete {
+    color: red;
+}
+
+/* Form Stuff */
+
+label, .label {
+    width: 120px;
+    display: inline-block;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+.field {
+    margin-top: 8px;
+}
+
+
+.button {
+    background: #00bfff;
+    cursor: pointer;
+    padding: 4px 6px 6px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    *padding: 4px 12px 6px;
+}
+
+.pagination_container {
+    float: left;
+    clear: both;
+}
+.actions{
+    margin-top: 8px;
+}

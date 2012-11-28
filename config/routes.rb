@@ -62,8 +62,10 @@ Todo::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 
-  resources :accounts
-  resources :todo_lists
+  resources :accounts, only: [:show, :edit, :update]
+  resources :todo_lists do
+    resources :todo_items
+  end
 
   resources :sessions, only: [:create, :destroy, :new]
 

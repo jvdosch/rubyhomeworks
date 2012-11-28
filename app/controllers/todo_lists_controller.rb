@@ -5,7 +5,7 @@ class TodoListsController < ApplicationController
   # GET /todo_lists
   # GET /todo_lists.json
   def index
-    @todo_lists = user_todo_lists
+    @todo_lists = user_todo_lists.paginate(page: params[:page], per_page: 7)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -17,6 +17,8 @@ class TodoListsController < ApplicationController
   # GET /todo_lists/1.json
   def show
     @todo_list = user_todo_lists.find(params[:id])
+
+    @relevant_todo_items = @todo_list.todo_items.paginate(page: params[:page], per_page: 7)
 
     respond_to do |format|
       format.html # show.html.erb

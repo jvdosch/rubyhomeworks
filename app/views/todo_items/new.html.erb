@@ -1,0 +1,10 @@
+<%date_class = 'complete' %>
+
+<h1>
+  <span class="header-title <%=date_class%>">New Todo Item</span>
+  <span class="header-edit-link"><%= link_to 'Back', [@todo_item.todo_list] %></span>
+</h1>
+
+<%= render 'form' %>
+
+

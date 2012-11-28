@@ -1,0 +1,16 @@
+<%date_class = (todo_list.todo_items == nil ||
+        todo_list.todo_items.length == 0 ||
+        todo_list.todo_items.select {|item| item.done?}.length == todo_list.todo_items.length) ? 'complete' : 'incomplete' %>
+
+<li>
+<div class="todo_list_container">
+  <div class="todo_list_title <%=date_class%>">
+    <%= link_to  todo_list.list_name, todo_list%>
+  </div>
+  <div class="todo_list_info">
+    <div class="todo_list_date <%=date_class%>"><%=todo_list.list_due_date.strftime('%m/%d/%Y')%></div>
+    <div class="todo_list_edit"><%= link_to 'Edit', edit_todo_list_path(todo_list) %></div>
+    <div class="todo_list_delete"><%= link_to 'Delete', todo_list, confirm: 'Are you sure?', method: :delete %></div>
+  </div>
+</div>
+</li>

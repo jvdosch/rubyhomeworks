@@ -1,0 +1,13 @@
+<%date_class = (todo_item.done?) ? 'complete' : 'incomplete' %>
+
+<li>
+<div class="todo_item_container">
+  <div class="todo_item_title <%=date_class%>">
+    <%= link_to todo_item.task_title, [@todo_list, todo_item] %>
+  </div>
+  <div class="todo_item_info">
+    <div class="todo_item_date <%=date_class%>"><%= todo_item.due_date.strftime('%m/%d/%Y') %></div>
+    <p class="todo_item_desc"><%= todo_item.description %></p>
+  </div>
+</div>
+</li>

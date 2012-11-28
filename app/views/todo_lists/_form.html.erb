@@ -11,7 +11,17 @@
     </div>
   <% end %>
 
+    <div class="field">
+      <%= f.label :list_name %>
+      <%= f.text_field :list_name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :list_due_date %>
+      <%= f.date_select :list_due_date %>
+    </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Save', {class: "button"} %>
   </div>
 <% end %>

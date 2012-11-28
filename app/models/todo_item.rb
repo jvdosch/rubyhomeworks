@@ -1,6 +1,6 @@
 class TodoItem < ActiveRecord::Base
 
-  attr_accessible :due_date, :task_title, :description
+  attr_accessible :due_date, :task_title, :description, :done
   belongs_to :todo_list
   has_and_belongs_to_many :tags
 

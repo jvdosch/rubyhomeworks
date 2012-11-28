@@ -1,0 +1,123 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* TODO LIST List */
+
+ul.todo_lists {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todo_list_container {
+  background-color: #E1FFFF;
+  border: 1px solid #87ceeb;
+  border-radius: 10px 10px 10px 10px;
+  float: left;
+  height: 225px;
+  margin: 8px;
+  width: 225px;
+}
+
+.todo_list_container:hover {
+  border: 1px solid #4169e1;
+}
+
+.todo_list_title {
+  text-align: center;
+  border-bottom:  #87ceeb;
+  border-radius: 10px 10px 0 0;
+  padding: 12px;
+  background-color: #4682b4;
+}
+.todo_list_title a{
+  font-weight: bold;
+}
+
+.todo_list_info {
+  padding: 12px;
+}
+
+.todo_list_date {
+  float: left;
+}
+
+.todo_list_edit {
+  float: right;
+  clear: right;
+  margin-left: 12px;
+}
+
+.todo_list_delete {
+  float: right;
+}
+
+.add_todo_list {
+  text-align: center;
+}
+
+.add_todo_list a{
+  color: #4682b4;
+  position: relative;
+  top: 90px;
+}
+
+
+
+/* TODO ITEM List */
+
+ul.todo_items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todo_item_container {
+  background-color: #E1FFFF;
+  border: 1px solid #87ceeb;
+  border-radius: 10px 10px 10px 10px;
+  float: left;
+  height: 225px;
+  margin: 8px;
+  width: 225px;
+}
+
+.todo_item_container:hover {
+  border: 1px solid #4169e1;
+}
+
+.todo_item_title {
+  text-align: center;
+  border-bottom:  #87ceeb;
+  border-radius: 10px 10px 0 0;
+  padding: 12px;
+  background-color: #4682b4;
+}
+.todo_item_title a{
+  font-weight: bold;
+}
+
+.todo_item_info {
+  padding: 12px;
+}
+
+.todo_item_date {
+  float: right;
+}
+
+.todo_item_desc {
+  font-size: 13px;
+  margin-top: 24px;
+  white-space: pre-wrap;
+}
+
+.add_todo_item {
+  text-align: center;
+}
+
+.add_todo_item a{
+  color: #4682b4;
+  position: relative;
+  top: 90px;
+}

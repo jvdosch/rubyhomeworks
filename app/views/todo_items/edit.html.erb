@@ -1,0 +1,10 @@
+<%date_class = (@todo_item.done?) ? 'complete' : 'incomplete' %>
+
+<h1>
+  <span class="header-title <%=date_class%>"><%=@todo_item.task_title%></span>
+  <span class="header-date <%=date_class%>"><%= @todo_item.due_date.strftime('%m/%d/%Y') %></span>
+  <span class="header-back-link"><%= link_to 'Back', [@todo_item.todo_list] %></span>
+</h1>
+
+<%= render 'form' %>
+
