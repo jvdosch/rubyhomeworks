@@ -62,6 +62,11 @@ Todo::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 
+  root :to => 'todo_lists#index'
+
+  match '/login' => 'sessions#new', as: 'login'
+  match '/logout' => 'sessions#destroy', as: 'logout', via: :delete
+
   resources :accounts, only: [:show, :edit, :update]
   resources :todo_lists do
     resources :todo_items
@@ -69,9 +74,5 @@ Todo::Application.routes.draw do
 
   resources :sessions, only: [:create, :destroy, :new]
 
-  root :to => 'todo_lists#index'
-
-  match '/login' => 'sessions#new', as: 'login'
-  match '/logout' => 'sessions#destroy', as: 'logout', via: :delete
 
 end
