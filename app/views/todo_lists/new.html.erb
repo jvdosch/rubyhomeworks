@@ -1,0 +1,9 @@
+<%date_class = 'complete' %>
+
+<h1>
+  <span class="header-title <%=date_class%>">New Todo List</span>
+  <span class="header-edit-link"><%= link_to 'Back', todo_lists_path %></span>
+</h1>
+
+<%= render 'form' %>
+

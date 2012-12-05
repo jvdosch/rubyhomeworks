@@ -1,0 +1,25 @@
+
+<h1>
+  <span class="header-title"><%=@account.first_name%> <%= @account.last_name %></span>
+  <span class="header-edit-link"><%= link_to 'Edit', edit_account_path(@account) %></span>
+</h1>
+
+<div class="field">
+  <span class="label">First Name</span>
+  <%= @account.first_name %>
+</div>
+
+<div class="field">
+  <span class="label">Last Name</span>
+  <%= @account.last_name %>
+</div>
+
+<div class="field">
+  <span class="label">Gender</span>
+  <%= @account.gender %>
+</div>
+
+<div class="field">
+  <span class="label">Age</span>
+  <%= @account.age %>
+</div>

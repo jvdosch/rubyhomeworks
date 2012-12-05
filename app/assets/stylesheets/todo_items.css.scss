@@ -1,0 +1,20 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.todo_item_description {
+  background-color: #F0F8FF;
+  color: #666666;
+  margin: 12px auto 0;
+  padding: 12px;
+}
+
+.todo_item_description_label {
+  color: #666;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.todo_item_status {
+  float: right;
+}

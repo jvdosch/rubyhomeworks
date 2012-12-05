@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "jquery-1.8.3", "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="nav-wrapper">
+    <div class="nav">
+      <% if logged_in? %>
+          <div class="todo_lists_link">
+            <%=  link_to "Todo Lists", todo_lists_path %>
+          </div>
+          <div class="account_links">
+            You are logged in as <%= current_user.login %> |
+            <%= link_to 'Edit Account', edit_account_path(current_user.account) %> |
+            <%=  link_to "Logout", logout_path, method: :delete %>
+          </div>
+      <% end %>
+    </div>
+</div>
+<div id="wrapper">
+  <div id="content">
+
+
+<% flash.each do |key, value| %>
+  <%= content_tag :p, value, class: key %>
+<% end %>
+
+<%= yield %>
+  </div>
+</div>
+</body>
+</html>

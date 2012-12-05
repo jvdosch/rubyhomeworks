@@ -1,0 +1,18 @@
+<h1>
+  <span class="header-title">Your Todo Lists</span>
+</h1>
+
+<ul class="todo_lists">
+  <%= render @todo_lists %>
+  <li>
+    <div class="todo_list_container add_todo_list">
+      <%= link_to 'Add Todo list', new_todo_list_path %>
+    </div>
+  </li>
+</ul>
+
+<div class="pagination_container">
+<%= will_paginate @todo_lists %>
+</div>
+
+

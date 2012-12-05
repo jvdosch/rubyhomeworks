@@ -1,0 +1,22 @@
+<%date_class = (todo_item.done?) ? 'complete' : 'incomplete' %>
+
+<li>
+<div id="todo_item_<%= todo_item.id %>" class="todo_item_container">
+  <div class="todo_item_title <%=date_class%>">
+    <%= link_to todo_item.task_title, [@todo_list, todo_item] %>
+  </div>
+  <div class="todo_item_info">
+    <% if !todo_item.done? %>
+    <div class="todo_item_status_changer">
+      <%= form_for([todo_item.todo_list, todo_item], remote: true) do |f| %>
+          <%= f.hidden_field :id, value: todo_item.id %>
+          <%= f.hidden_field :done, value: 1 %>
+          <%= f.submit 'Mark as Done', {class: "button"}  %>
+      <% end %>
+    </div>
+    <% end %>
+    <div class="todo_item_date <%=date_class%>"><%= todo_item.due_date.strftime('%Y-%m-%d') if todo_item.due_date != nil %></div>
+    <p class="todo_item_desc"><%= todo_item.description %></p>
+  </div>
+</div>
+</li>

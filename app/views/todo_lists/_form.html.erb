@@ -1,0 +1,27 @@
+<%= form_for(@todo_list) do |f| %>
+  <% if @todo_list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@todo_list.errors.count, "error") %> prohibited this todo_list from being saved:</h2>
+
+      <ul>
+      <% @todo_list.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="field">
+      <%= f.label :list_name %>
+      <%= f.text_field :list_name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :list_due_date %>
+      <%= f.text_field :list_due_date, {value: (f.object.list_due_date.strftime('%Y-%m-%d') if f.object.list_due_date != nil), class: 'uses_date_picker'} %>
+    </div>
+
+  <div class="actions">
+    <%= f.submit 'Save', {class: "button"} %>
+  </div>
+<% end %>
