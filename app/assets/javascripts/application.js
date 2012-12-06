@@ -10,9 +10,9 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
+//= require jquery-1.8.3
 //= require jquery_ujs
-//= require jquery-ui
+//= require jquery-ui-1.9.2.custom.min
 //= require_tree .
 
 $(document).ready(function() {
